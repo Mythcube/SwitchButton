@@ -23,7 +23,44 @@
 			android:id="@+id/sb_default"
 			style="@style/SwitchButtonStyle"
 			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"/>
+			android:layout_height="wrap_content"
+			/>
+
+		<TextView
+			style="@style/StyleTitleText"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/style_text"/>
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal">
+
+			<com.kyleduo.switchbutton.SwitchButton
+				android:id="@+id/sb_text"
+				style="@style/SwitchButtonStyle"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:textColor="#FFFFFF"
+				android:textSize="16dp"
+				app:kswTextOff="Off"
+				app:kswTextOn="On"
+				/>
+
+			<com.kyleduo.switchbutton.SwitchButton
+				android:id="@+id/sb_text_state"
+				style="@style/SwitchButtonStyle"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:textColor="@color/custom_text_state_color"
+				android:textSize="16dp"
+				app:kswTextOff="Off"
+				app:kswTextOn="On"
+				/>
+
+
+		</LinearLayout>
 
 		<TextView
 			style="@style/StyleTitleText"
@@ -172,7 +209,7 @@
 				app:kswAnimationDuration="300"
 				app:kswBackDrawable="@drawable/ios_back_drawable"
 				app:kswBackMeasureRatio="1.4"
-				app:kswThumbDrawable="@drawable/ios_thumb"
+				app:kswThumbDrawable="@drawable/ios_thumb_selector"
 				app:kswThumbMarginBottom="-8dp"
 				app:kswThumbMarginLeft="-5dp"
 				app:kswThumbMarginRight="-5dp"
@@ -212,13 +249,31 @@
 			android:layout_height="wrap_content"
 			android:text="@string/style_disable_opt"/>
 
-		<com.kyleduo.switchbutton.SwitchButton
-			android:id="@+id/sb_disable_control"
-			style="@style/SwitchButtonStyle"
-			android:layout_width="wrap_content"
+		<LinearLayout
+			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
-			android:checked="true"
-			/>
+			android:orientation="horizontal">
+
+			<com.kyleduo.switchbutton.SwitchButton
+				android:id="@+id/sb_disable_control"
+				style="@style/SwitchButtonStyle"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:checked="true"
+				/>
+
+			<com.kyleduo.switchbutton.SwitchButton
+				android:id="@+id/sb_disable_control_no_event"
+				style="@style/SwitchButtonStyle"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				/>
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@string/disable_no_event"/>
+		</LinearLayout>
 
 	</LinearLayout>
 </ScrollView>
